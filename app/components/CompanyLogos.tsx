@@ -1,0 +1,98 @@
+"use client";
+import NoSSRWrapper from "@/utils/NoSSRWrapper";
+import Slider from "react-slick";
+import { motion } from "framer-motion";
+
+const CompanyLogos = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 2000, // Adjust this for speed of scroll
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0, // Set to 0 for continuous scroll
+    cssEase: "linear", // Smooth linear transition
+    pauseOnHover: false,
+  };
+  const settings2 = {
+    dots: false,
+    infinite: true,
+    speed: 2000, // Adjust this for speed of scroll
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0, // Set to 0 for continuous scroll
+    cssEase: "linear", // Smooth linear transition
+    pauseOnHover: false,
+    rtl: true,
+  };
+  const shuffledLogos = [
+    "Honda.png",
+    "ferrari.png",
+    "w.png",
+    "nisan.png",
+    "OD.png",
+    "triangles.png",
+    "tyota.png",
+    "v.png",
+    "ferrari.png",
+    "w.png",
+    "OD.png",
+    "nisan.png",
+    "Honda.png",
+    "tyota.png",
+    "v.png",
+    "triangles.png",
+    "ferrari.png",
+    "w.png",
+    "OD.png",
+    "nisan.png",
+  ];
+
+  return (
+    <NoSSRWrapper>
+      <motion.section
+        id="company-logos"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="container mx-auto">
+          <h2 className="text-center text-2xl text-white mb-4">Our Partners</h2>
+          <Slider {...settings}>
+            {shuffledLogos.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ scale: 0.9 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className=" h-fit w-fit flex items-center justify-center"
+              >
+                <img src={`/images/carLogos/${item}`} alt="logo" width="70px" />
+              </motion.div>
+            ))}
+          </Slider>
+          <Slider {...settings2}>
+            {shuffledLogos.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ scale: 0.9 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className=" h-fit w-fit flex items-center justify-center"
+              >
+                <img src={`/images/carLogos/${item}`} alt="logo" width="70px" />
+              </motion.div>
+            ))}
+          </Slider>
+        </div>
+      </motion.section>
+    </NoSSRWrapper>
+  );
+};
+
+export default CompanyLogos;
