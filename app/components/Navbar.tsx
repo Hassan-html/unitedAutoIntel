@@ -233,15 +233,11 @@ const Navbar: React.FC<NavbarProps> = () => {
             <Link href="/parts" onClick={toggleMenu}>
               FIND AUTO PARTS
             </Link>
-            <Link href="/bulk/orders" onClick={toggleMenu}>
-              ORDER IN BULK
-            </Link>
+
             <Link href="/accessories" onClick={toggleMenu}>
-              ACCESSORIES
+              Brands
             </Link>
-            <Link href="/lubricants" onClick={toggleMenu}>
-              LUBRICANTS
-            </Link>
+
             <Link href="/contact" onClick={toggleMenu}>
               CONTACT
             </Link>
