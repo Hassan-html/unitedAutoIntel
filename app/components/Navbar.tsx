@@ -111,7 +111,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             <span>+971558981016</span>
           </div>
           <button className="text-white bg-primary py-2 px-4 rounded">
-            Get Quota Store
+            Get Quota
           </button>
         </div>
 

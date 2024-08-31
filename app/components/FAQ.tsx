@@ -32,7 +32,7 @@ const FAQSection = () => {
     {
       question: "Where can I find quality spare parts for my car?",
       answer:
-        "You can find quality spare parts at authorized dealerships, online stores with good reviews, and specialty auto parts retailers. Ensure the parts are compatible with your car and come with a warranty.",
+        "You can find quality spare parts at authorized dealerships, online  s with good reviews, and specialty auto parts retailers. Ensure the parts are compatible with your car and come with a warranty.",
     },
   ];
 

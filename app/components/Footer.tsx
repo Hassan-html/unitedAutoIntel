@@ -24,6 +24,7 @@ const Footer = () => {
             <h1 className="text-red-600 text-4xl uppercase font-bold">
               United Autos
             </h1>
+            <h2 className="text-primary text-xl uppercase font-bold">Dubai</h2>
             <p className="text-sm leading-relaxed">
               303 al sanabil - Naif - Dubai - United Arab Emirates
               <br />
@@ -31,12 +32,26 @@ const Footer = () => {
             </p>
             <p className="text-sm">
               Phone:{" "}
-              <a href="tel:+97143397110" className="underline">
+              <a href="tel:+971558981016" className="underline">
                 +971558981016
               </a>
             </p>
+            <h2 className="text-primary text-xl uppercase font-bold">
+              Pakistan
+            </h2>
+            <p className="text-sm leading-relaxed">
+              Near Al-Qasim Jamia Masjid, Shop #2, Capital Road, Jinnah Town
+              <br />
+              Number: 0328 5852875
+            </p>
+            <p className="text-sm">
+              Phone:{" "}
+              <a href="tel:0328 5852875" className="underline">
+                0328 5852875
+              </a>
+            </p>
             <button className="bg-primary text-white py-2 px-4 rounded mt-4">
-              Get Quota Store
+              Get Quota
             </button>
           </div>
 
