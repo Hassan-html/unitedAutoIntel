@@ -202,7 +202,6 @@ const Navbar: React.FC<NavbarProps> = () => {
               </motion.div>
             </div>
 
-            <Link href="/lubricants">LUBRICANTS</Link>
             <Link href="/contact">CONTACT</Link>
           </nav>
         </div>
