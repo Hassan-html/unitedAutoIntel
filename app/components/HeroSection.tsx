@@ -135,7 +135,7 @@ const HeroSection = () => {
                 className="text-[30px] md:text-[40px] lg:text-[50px] font-extrabold z-20"
                 style={{ letterSpacing: "5px" }}
               >
-                United Autos
+                United Auto
               </motion.h1>
               <motion.h1
                 initial={{ opacity: 0, y: 50 }}

@@ -34,7 +34,7 @@ const ContactSection = () => {
 
           {/* Contact Information */}
           <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
-            <h3 className="text-2xl font-bold">United Autos</h3>
+            <h3 className="text-2xl font-bold"> United Auto</h3>
             <p className="text-lg">
               <FaLocationPin className="inline text-red-600" /> 303 al sanabil -
               Naif - Dubai - United Arab Emirates
@@ -99,7 +99,7 @@ const ContactSection = () => {
 
           {/* Contact Information */}
           <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
-            <h3 className="text-2xl font-bold">United Autos</h3>
+            <h3 className="text-2xl font-bold"> United Auto</h3>
             <p className="text-lg">
               <FaLocationPin className="inline text-red-600" /> Near Al-Qasim
               Jamia Masjid, Shop #2, Capital Road, Jinnah Town

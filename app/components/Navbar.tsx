@@ -85,7 +85,7 @@ const Navbar: React.FC<NavbarProps> = () => {
           {/* Logo and Search */}
           <div className="flex items-center gap-4 justify-end">
             <div className="logo uppercase text-red-600 text-2xl font-bold flex flex-nowrap justify-center items-center">
-              <p className="text-nowrap">United Autos</p>
+              <p className="text-nowrap"> United Auto</p>
             </div>
             <div className="input-Group hidden lg:flex items-center bg-white overflow-hidden border border-primary w-[300px]">
               <input

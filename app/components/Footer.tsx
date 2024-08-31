@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Company Information */}
           <div className="space-y-4">
             <h1 className="text-red-600 text-4xl uppercase font-bold">
-              United Autos
+              United Auto
             </h1>
             <h2 className="text-primary text-xl uppercase font-bold">Dubai</h2>
             <p className="text-sm leading-relaxed">

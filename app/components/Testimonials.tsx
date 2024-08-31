@@ -6,35 +6,35 @@ import { FaStar } from "react-icons/fa";
 
 const testimonials = [
   {
-    text: "United Autos is our go-to for auto parts! They deliver high-quality service and ensure timely deliveries. I've been a loyal customer for years, and I can't recommend them enough.",
+    text: " United Auto is our go-to for auto parts! They deliver high-quality service and ensure timely deliveries. I've been a loyal customer for years, and I can't recommend them enough.",
     author: "Customer A",
     date: "2024-08-20",
     rating: 5,
     picture: "/images/customer/person.webp",
   },
   {
-    text: "Reliable and affordable. United Autos always provides exceptional service and top-notch products. Their customer support is excellent, and I always feel valued.",
+    text: "Reliable and affordable.  United Auto always provides exceptional service and top-notch products. Their customer support is excellent, and I always feel valued.",
     author: "Customer B",
     date: "2024-08-18",
     rating: 4,
     picture: "/images/customer/person.webp",
   },
   {
-    text: "Excellent customer support and fast delivery. Highly recommend! The staff at United Autos are knowledgeable and always go the extra mile to help.",
+    text: "Excellent customer support and fast delivery. Highly recommend! The staff at  United Auto are knowledgeable and always go the extra mile to help.",
     author: "Customer C",
     date: "2024-08-17",
     rating: 5,
     picture: "/images/customer/person.webp",
   },
   {
-    text: "Great value for money. United Autos offers a great selection of parts at competitive prices. I've had nothing but positive experiences with them.",
+    text: "Great value for money.  United Auto offers a great selection of parts at competitive prices. I've had nothing but positive experiences with them.",
     author: "Customer D",
     date: "2024-08-15",
     rating: 4,
     picture: "/images/customer/person.webp",
   },
   {
-    text: "Impressed with the variety and quality of parts. United Autos has become my go-to supplier for all my auto parts needs. Their service is exceptional.",
+    text: "Impressed with the variety and quality of parts.  United Auto has become my go-to supplier for all my auto parts needs. Their service is exceptional.",
     author: "Customer E",
     date: "2024-08-10",
     rating: 5,

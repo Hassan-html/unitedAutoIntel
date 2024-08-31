@@ -11,10 +11,10 @@ const inter = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "United Autos - Premium Auto Spare Parts in Dubai",
+  title: " United Auto - Premium Auto Spare Parts in Dubai",
   description: "Your trusted source for premium auto spare parts in Dubai.",
   openGraph: {
-    title: "United Autos - Premium Auto Spare Parts in Dubai",
+    title: " United Auto - Premium Auto Spare Parts in Dubai",
     description:
       "Explore our wide range of quality auto spare parts for all major automotive brands. Trusted in Dubai.",
     url: "https://www.unitedautointl.com/",
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "United Autos - Auto Spare Parts",
+        alt: " United Auto - Auto Spare Parts",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@unitedautointl",
-    title: "United Autos - Premium Auto Spare Parts in Dubai",
+    title: " United Auto - Premium Auto Spare Parts in Dubai",
     description:
       "Explore our wide range of quality auto spare parts for all major brands. Trusted in Dubai.",
     images: "/images/twitter-image.jpg",

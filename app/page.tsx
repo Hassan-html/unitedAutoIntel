@@ -13,12 +13,12 @@ import FlipCardSection from "@/app/components/companies";
 import ContactSection from "./components/MapComponent";
 
 export const metadata: Metadata = {
-  title: "United Autos - Premium Auto Spare Parts in Dubai",
+  title: " United Auto - Premium Auto Spare Parts in Dubai",
   description:
     "Your trusted source for premium auto spare parts in Dubai. Explore a wide range of quality parts for all major automotive brands.",
-  keywords: "Auto Spare Parts, Dubai, Car Parts, United Autos, Honda, Tesla",
+  keywords: "Auto Spare Parts, Dubai, Car Parts,  United Auto, Honda, Tesla",
   openGraph: {
-    title: "United Autos - Premium Auto Spare Parts in Dubai",
+    title: " United Auto - Premium Auto Spare Parts in Dubai",
     description: "Your trusted source for premium auto spare parts in Dubai.",
     url: "https://www.unitedautointl.com/",
     type: "website",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@unitedautointl",
-    title: "United Autos - Premium Auto Spare Parts in Dubai",
+    title: " United Auto - Premium Auto Spare Parts in Dubai",
     description:
       "Explore our wide range of quality auto spare parts for all major brands. Trusted in Dubai.",
     images: "/images/twitter-image.jpg",
