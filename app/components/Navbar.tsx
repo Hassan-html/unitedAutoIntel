@@ -81,38 +81,40 @@ const Navbar: React.FC<NavbarProps> = () => {
       }`}
     >
       <div className="container mx-auto grid grid-cols-2 items-center">
-        {/* Logo and Search */}
-        <div className="flex items-center gap-4 justify-end">
-          <div className="logo uppercase text-red-600 text-2xl font-bold flex flex-nowrap justify-center items-center">
-            <p className="text-nowrap">United Autos</p>
+        <div className="justify-self-center col-span-2 flex gap-10 items-center justify-center">
+          {/* Logo and Search */}
+          <div className="flex items-center gap-4 justify-end">
+            <div className="logo uppercase text-red-600 text-2xl font-bold flex flex-nowrap justify-center items-center">
+              <p className="text-nowrap">United Autos</p>
+            </div>
+            <div className="input-Group hidden lg:flex items-center bg-white overflow-hidden border border-primary w-[300px]">
+              <input
+                className="bg-transparent outline-none border-none w-full px-4 py-2 text-black text-sm"
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={handleSearch}
+              />
+              <button className="btn-search py-2 px-4 bg-red-600 text-white text-sm h-full">
+                SEARCH
+              </button>
+            </div>
           </div>
-          <div className="input-Group hidden lg:flex items-center bg-white overflow-hidden border border-primary w-[300px]">
-            <input
-              className="bg-transparent outline-none border-none w-full px-4 py-2 text-black text-sm"
-              type="text"
-              placeholder="Search..."
-              value={searchQuery}
-              onChange={handleSearch}
-            />
-            <button className="btn-search py-2 px-4 bg-red-600 text-white text-sm h-full">
-              SEARCH
+
+          {/* Contact Information */}
+          <div className="hidden lg:flex items-center gap-4 justify-center">
+            <div className="flex items-center text-gray-600">
+              <FaMapMarkerAlt className="mr-2" />
+              <span>303 al sanabil - Naif - Dubai - United Arab Emirates</span>
+            </div>
+            <div className="flex items-center text-gray-600">
+              <FaPhone className="mr-2" />
+              <span>+971558981016</span>
+            </div>
+            <button className="text-white bg-primary py-2 px-4 rounded">
+              Get Quota
             </button>
           </div>
-        </div>
-
-        {/* Contact Information */}
-        <div className="hidden lg:flex items-center gap-4 justify-center">
-          <div className="flex items-center text-gray-600">
-            <FaMapMarkerAlt className="mr-2" />
-            <span>303 al sanabil - Naif - Dubai - United Arab Emirates</span>
-          </div>
-          <div className="flex items-center text-gray-600">
-            <FaPhone className="mr-2" />
-            <span>+971558981016</span>
-          </div>
-          <button className="text-white bg-primary py-2 px-4 rounded">
-            Get Quota
-          </button>
         </div>
 
         {/* Navigation and Mobile Menu Icon */}
