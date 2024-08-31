@@ -62,7 +62,7 @@ const FeaturedProducts = ({ products }: FeaturedProductsProps) => {
         <h1 className="uppercase text-lg font-extrabold text-center mt-5 mb-20">
           Browse From Our Collection
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {currentProducts.map((product: Product) => (
             <motion.div
               key={product.id}
@@ -135,7 +135,7 @@ const FeaturedProducts = ({ products }: FeaturedProductsProps) => {
                     Quote Now
                   </Button>
                   <Button color="info">
-                    <a href="mailto:info@unitedautointel.com">Contact Us</a>
+                    <a href="mailto:info@unitedautointl.com">Contact Us</a>
                   </Button>
                 </div>
               </div>

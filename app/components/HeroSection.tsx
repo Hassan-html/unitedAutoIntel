@@ -135,7 +135,7 @@ const HeroSection = () => {
                 className="text-[30px] md:text-[40px] lg:text-[50px] font-extrabold z-20"
                 style={{ letterSpacing: "5px" }}
               >
-                United Auto Intel
+                United Autos
               </motion.h1>
               <motion.h1
                 initial={{ opacity: 0, y: 50 }}
@@ -209,10 +209,10 @@ const HeroSection = () => {
                 className="text-[30px] md:text-[50px] lg:text-[70px] font-extrabold mb-1 z-20"
                 style={{ textShadow: "5px 5px 0px black" }}
               >
-                Al Quoz, Dubai, UAE
+                303 al sanabil - Naif - Dubai - United Arab Emirates
               </motion.h1>
               <motion.p className="text-[16px] md:text-[20px] z-20">
-                Reach us at info@unitedautoinl.com | +971 123 456 789
+                Reach us at info@unitedautointl.com | +971558981016
               </motion.p>
               <motion.button className="flex gap-2 items-center rounded-lg p-4 md:p-5 text-white bg-highlight hover:bg-primary z-20 w-fit mt-10 text-[14px] md:text-[18px]">
                 <span>Get Directions</span> <FaArrowRight />

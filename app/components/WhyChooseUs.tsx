@@ -28,10 +28,10 @@ const WhyChooseUs = () => {
               Unmatched Quality and Service
             </h3>
             <p className="text-lg leading-relaxed">
-              At United Auto Intl, we pride ourselves on offering only the
-              highest quality auto spare parts. Our extensive selection is
-              carefully sourced from top manufacturers to ensure maximum
-              reliability and durability for your vehicle.
+              At United Autos, we pride ourselves on offering only the highest
+              quality auto spare parts. Our extensive selection is carefully
+              sourced from top manufacturers to ensure maximum reliability and
+              durability for your vehicle.
             </p>
             <p className="text-lg leading-relaxed">
               Our commitment to excellence is reflected in our exceptional

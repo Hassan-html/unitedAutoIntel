@@ -25,18 +25,18 @@ const Footer = () => {
               United Autos
             </h1>
             <p className="text-sm leading-relaxed">
-              SHED -12 365-AL QUOZ IND. SECOND Premise
+              303 al sanabil - Naif - Dubai - United Arab Emirates
               <br />
-              Number: 365099406, PO Box: 24651, Dubai, UAE
+              Number: +971558981016, PO Box: 24651, Dubai, UAE
             </p>
             <p className="text-sm">
               Phone:{" "}
               <a href="tel:+97143397110" className="underline">
-                +971 4339 7110
+                +971558981016
               </a>
             </p>
             <button className="bg-primary text-white py-2 px-4 rounded mt-4">
-              Amazon Store
+              Get Quota Store
             </button>
           </div>
 
@@ -103,31 +103,6 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:text-primary">
-                  BMW
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary">
-                  Audi
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary">
-                  Porsche
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary">
-                  Mercedes
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary">
-                  Volkswagen
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary">
                   Toyota
                 </a>
               </li>
@@ -163,7 +138,17 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="hover:text-primary">
-                  Jeep
+                  Lexus
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  MG
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Hyundai
                 </a>
               </li>
             </ul>
@@ -188,7 +173,8 @@ const Footer = () => {
         <div className="border-t border-gray-300 mt-12 pt-6 text-center text-sm relative z-10">
           <div className="flex flex-col md:flex-row md:justify-between items-center">
             <p className="text-gray-700">
-              &copy; {new Date().getFullYear()} Noorfhan. All rights reserved.
+              &copy; {new Date().getFullYear()} United Auto. All rights
+              reserved.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="hover:text-primary">

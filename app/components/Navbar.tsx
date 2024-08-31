@@ -104,14 +104,14 @@ const Navbar: React.FC<NavbarProps> = () => {
         <div className="hidden lg:flex items-center gap-4 justify-center">
           <div className="flex items-center text-gray-600">
             <FaMapMarkerAlt className="mr-2" />
-            <span>Al Quoz 2, Dubai, UAE</span>
+            <span>303 al sanabil - Naif - Dubai - United Arab Emirates</span>
           </div>
           <div className="flex items-center text-gray-600">
             <FaPhone className="mr-2" />
-            <span>+971 4339 7110</span>
+            <span>+971558981016</span>
           </div>
           <button className="text-white bg-primary py-2 px-4 rounded">
-            Amazon Store
+            Get Quota Store
           </button>
         </div>
 
@@ -143,15 +143,15 @@ const Navbar: React.FC<NavbarProps> = () => {
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4   ">
                   <div>
-                    <h3 className="text-lg font-bold">Engine Parts</h3>
+                    <h3 className="text-lg font-bold">Genuin Parts</h3>
                     <p className="text-sm">Pistons, Camshaft, Crankshaft...</p>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold">Braking Systems</h3>
+                    <h3 className="text-lg font-bold">AfterMarket Parts</h3>
                     <p className="text-sm">Brake Pads, Discs, Calipers...</p>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold">Suspension</h3>
+                    <h3 className="text-lg font-bold">Rubber</h3>
                     <p className="text-sm">Shocks, Struts, Control Arms...</p>
                   </div>
                   <div>
@@ -163,55 +163,11 @@ const Navbar: React.FC<NavbarProps> = () => {
             </div>
 
             {/* Custom Dropdown for ORDER IN BULK */}
-            <div className=" group">
-              <span className="cursor-pointer flex items-center gap-2">
-                ORDER IN BULK <FaAngleDown />
-              </span>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                className="absolute hidden group-hover:flex flex-col bg-white text-black p-8 shadow-lg gap-4  rounded w-full max-h-[500px] overflow-y-auto right-0"
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4  ">
-                  <div>
-                    <h3 className="text-lg font-bold">
-                      Wholesale Engine Parts
-                    </h3>
-                    <p className="text-sm">
-                      Order pistons, crankshafts in bulk...
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold">
-                      Wholesale Brake Systems
-                    </h3>
-                    <p className="text-sm">
-                      Get brake pads, discs in large quantities...
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold">
-                      Bulk Suspension Systems
-                    </h3>
-                    <p className="text-sm">
-                      Order suspension components at wholesale prices...
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold">Bulk Cooling Systems</h3>
-                    <p className="text-sm">
-                      Get radiators, water pumps at wholesale rates...
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
 
             {/* Custom Dropdown for ACCESSORIES */}
             <div className=" group">
               <span className="cursor-pointer flex items-center gap-2">
-                ACCESSORIES <FaAngleDown />
+                Brands <FaAngleDown />
               </span>
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -221,23 +177,23 @@ const Navbar: React.FC<NavbarProps> = () => {
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4  ">
                   <div>
-                    <h3 className="text-lg font-bold">Car Covers</h3>
+                    <h3 className="text-lg font-bold">Genuin</h3>
                     <p className="text-sm">
                       Protect your vehicle with our covers...
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold">Floor Mats</h3>
+                    <h3 className="text-lg font-bold">AfterMarket</h3>
                     <p className="text-sm">Durable and stylish floor mats...</p>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold">Sunshades</h3>
+                    <h3 className="text-lg font-bold">Rubber</h3>
                     <p className="text-sm">
                       Keep your car cool with our sunshades...
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold">Steering Covers</h3>
+                    <h3 className="text-lg font-bold">Others</h3>
                     <p className="text-sm">
                       Enhance your driving experience...
                     </p>
