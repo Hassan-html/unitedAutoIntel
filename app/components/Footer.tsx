@@ -28,21 +28,16 @@ const Footer = () => {
             <p className="text-sm leading-relaxed">
               303 al sanabil - Naif - Dubai - United Arab Emirates
               <br />
-              Number: +971558981016, PO Box: 24651, Dubai, UAE
+              <span className="font-bold">Number</span>: +971 558 981 016
             </p>
-            <p className="text-sm">
-              Phone:{" "}
-              <a href="tel:+971558981016" className="underline">
-                +971558981016
-              </a>
-            </p>
+
             <h2 className="text-primary text-xl uppercase font-bold">
               Pakistan
             </h2>
             <p className="text-sm leading-relaxed">
               Near Al-Qasim Jamia Masjid, Shop #2, Capital Road, Jinnah Town
               <br />
-              Number: 0328 5852875
+              <span className="font-bold">Number:</span> 0328 5852875
             </p>
             <p className="text-sm">
               Phone:{" "}
@@ -172,8 +167,18 @@ const Footer = () => {
           {/* Work Hours */}
           <div className="lg:col-span-1 md:col-span-2">
             <h3 className="text-lg font-semibold mb-4">Work Hours</h3>
+            <p className="text-lg">
+              <span className="font-extrabold">Monday - Friday:</span> 8:30 AM -
+              5:30 PM
+            </p>
+            <p className="text-lg">
+              <span className="font-extrabold">Saturday:</span> 8:00 AM - 5:00
+              PM
+            </p>
+            <p className="text-lg">
+              <span className="font-extrabold">Sunday:</span> closed
+            </p>
             <p className="text-sm leading-relaxed">
-              8:30 AM - 7 PM, Monday - Saturday
               <br />
               Our Support and Sales team is available during office hours to
               answer your queries.

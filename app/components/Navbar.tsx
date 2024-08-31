@@ -169,7 +169,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             {/* Custom Dropdown for ACCESSORIES */}
             <div className=" group">
               <span className="cursor-pointer flex items-center gap-2">
-                Brands <FaAngleDown />
+                BRANDS <FaAngleDown />
               </span>
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -235,7 +235,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             </Link>
 
             <Link href="/accessories" onClick={toggleMenu}>
-              Brands
+              BRANDS
             </Link>
 
             <Link href="/contact" onClick={toggleMenu}>
