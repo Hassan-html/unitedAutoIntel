@@ -1,15 +1,18 @@
 import type { Config } from "tailwindcss";
-
+const flowbite = require("flowbite-react/tailwind");
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/flowbite-react/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.{js,ts,jsx,tsx}",
+    flowbite.content(), // Add this line for Flowbite
   ],
   theme: {
     extend: {
       colors: {
-        primary: "#1E2A39", // Dark Blue
+        primary: "#141D27", // Dark Blue
         secondary: "#6C757D", // Gray
         accent: "#021B4B", // Bright Red
         background: "#F7F7F7", // Light Gray
@@ -28,6 +31,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("flowbite/plugin"),
+    flowbite.plugin(), // Add this line for Flowbite plugins
+  ],
 };
 export default config;

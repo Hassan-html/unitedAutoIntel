@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import SocialMediaIcons from "@/app/components/SocialButtons";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "400", "500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   title: "United Auto Intl - Premium Auto Spare Parts in Dubai",

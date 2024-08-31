@@ -2,85 +2,73 @@
 import NoSSRWrapper from "@/utils/NoSSRWrapper";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
-import { FaStar, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 const testimonials = [
   {
-    text: "Great service and quality products. United Auto Intl is our go-to for auto parts! Their team consistently delivers high-quality service and ensures we always get the parts we need on time. I've been a loyal customer for years, and I can't recommend them enough. If you're looking for reliable and affordable auto parts, United Auto Intl is the place to go!",
+    text: "United Auto Intl is our go-to for auto parts! They deliver high-quality service and ensure timely deliveries. I've been a loyal customer for years, and I can't recommend them enough.",
     author: "Customer A",
     date: "2024-08-20",
     rating: 5,
-    picture: "/images/customerA.jpg",
+    picture: "/images/customer/person.webp",
   },
   {
-    text: "Reliable and affordable. I've been a loyal customer for years. United Auto Intl provides exceptional service and their products are always top-notch. Whenever I need spare parts, I know I can count on them to deliver quickly and efficiently. Their customer support is also excellent, and I always feel valued as a customer.",
+    text: "Reliable and affordable. United Auto Intl always provides exceptional service and top-notch products. Their customer support is excellent, and I always feel valued.",
     author: "Customer B",
     date: "2024-08-18",
     rating: 4,
-    picture: "/images/customerB.jpg",
+    picture: "/images/customer/person.webp",
   },
   {
-    text: "Excellent customer support and fast delivery. Highly recommend! The staff at United Auto Intl are knowledgeable and always go the extra mile to help. Their wide range of products means I can always find what I need, and the quality of their parts is consistently high. I appreciate their attention to detail and commitment to customer satisfaction.",
+    text: "Excellent customer support and fast delivery. Highly recommend! The staff at United Auto Intl are knowledgeable and always go the extra mile to help.",
     author: "Customer C",
     date: "2024-08-17",
     rating: 5,
-    picture: "/images/customerC.jpg",
+    picture: "/images/customer/person.webp",
   },
   {
-    text: "Great value for money and the staff are very helpful. United Auto Intl offers a great selection of parts at competitive prices, and their customer service is second to none. I've had nothing but positive experiences with them and would highly recommend them to anyone in need of auto parts.",
+    text: "Great value for money. United Auto Intl offers a great selection of parts at competitive prices. I've had nothing but positive experiences with them.",
     author: "Customer D",
     date: "2024-08-15",
     rating: 4,
-    picture: "/images/customerD.jpg",
+    picture: "/images/customer/person.webp",
   },
   {
-    text: "Impressed with the variety and quality of parts available. United Auto Intl has become my go-to supplier for all my auto parts needs. Their products are always of the highest quality, and their service is exceptional. I appreciate the peace of mind that comes with knowing I'm getting genuine parts at a fair price.",
+    text: "Impressed with the variety and quality of parts. United Auto Intl has become my go-to supplier for all my auto parts needs. Their service is exceptional.",
     author: "Customer E",
     date: "2024-08-10",
     rating: 5,
-    picture: "/images/customerE.jpg",
+    picture: "/images/customer/person.webp",
   },
 ];
-
-const CustomPrevArrow = (props: any) => {
-  const { onClick } = props;
-  return (
-    <button
-      onClick={onClick}
-      className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-2 text-white bg-primary rounded-full shadow-lg"
-    >
-      <FaArrowLeft />
-    </button>
-  );
-};
-
-const CustomNextArrow = (props: any) => {
-  const { onClick } = props;
-  return (
-    <button
-      onClick={onClick}
-      className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-2 text-white bg-primary rounded-full shadow-lg"
-    >
-      <FaArrowRight />
-    </button>
-  );
-};
 
 const Testimonials = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
+    arrows: false, // Remove controllers
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
     appendDots: (dots: any) => (
       <div
         style={{
-          backgroundColor: "#ddd",
           borderRadius: "10px",
           padding: "10px",
           bottom: "-40px",
@@ -109,23 +97,23 @@ const Testimonials = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="container mx-auto py-16"
+        className="container mx-auto py-16 px-4 sm:px-6 lg:px-8"
       >
         <h2 className="text-3xl font-bold text-center mt-8 mb-2 uppercase">
           Testimonials
         </h2>
         <h2 className="text-lg font-bold text-center mb-10 uppercase">
-          Here's what our customer think about us
+          Here's what our customers think about us
         </h2>
         <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              initial={{ scale: 0.9 }}
+              initial={{ scale: 0.95 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white p-6 rounded-lg shadow-lg relative mx-3"
+              className="bg-white p-6 rounded-lg shadow-xl relative mx-3 transform hover:scale-[1.02] transition-transform duration-300 ease-in-out"
             >
               <div className="flex items-center mb-4">
                 <img

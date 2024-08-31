@@ -9,6 +9,8 @@ import FeaturedProducts from "./components/FeaturedProduct";
 import products from "@/utils/productData";
 import StatsSection from "@/app/components/StateSection";
 import FAQSection from "@/app/components/FAQ";
+import FlipCardSection from "@/app/components/companies";
+import ContactSection from "./components/MapComponent";
 
 export const metadata: Metadata = {
   title: "United Auto Intl - Premium Auto Spare Parts in Dubai",
@@ -46,9 +48,12 @@ export default function HomePage() {
       <FeaturedProducts
         products={products.filter((product) => product.featured)}
       />
+      <FlipCardSection />
+
       <WhyChooseUs />
       <StatsSection />
       <CompanyLogos />
+      <ContactSection />
       <FAQSection />
       <Testimonials />
       <BackToTopButton />

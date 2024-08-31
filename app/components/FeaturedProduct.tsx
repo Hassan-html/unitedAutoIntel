@@ -2,10 +2,33 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import NoSSRWrapper from "@/utils/NoSSRWrapper";
+import { Modal, Button } from "flowbite-react";
 
-const FeaturedProducts = ({ products }: any) => {
+// Define interfaces for the product data
+interface Product {
+  id: string;
+  title: string;
+  subtitle: string;
+  name: string;
+  thumbnail: string;
+  longDescription: string;
+  shortDescription: string;
+  category: string;
+  price: number;
+  featured: boolean;
+  images: string[];
+}
+
+interface FeaturedProductsProps {
+  products: Product[];
+}
+
+const FeaturedProducts = ({ products }: FeaturedProductsProps) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 8; // Changed to display 2 rows (4 columns * 2 rows = 8 products per page)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  const productsPerPage = 8;
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -14,7 +37,14 @@ const FeaturedProducts = ({ products }: any) => {
     indexOfLastProduct
   );
 
-  const paginate = (pageNumber: any) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
+  const openModal = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <NoSSRWrapper>
@@ -27,32 +57,32 @@ const FeaturedProducts = ({ products }: any) => {
         className="container mx-auto py-16"
       >
         <h2 className="text-5xl font-extrabold text-center mt-10 uppercase">
-          Auto Parts
+          Explore Some Of Our Quality Parts
         </h2>
-        <h1 className="uppercase text-lg font-extrabold text-center mt-5 mb-20 ">
+        <h1 className="uppercase text-lg font-extrabold text-center mt-5 mb-20">
           Browse From Our Collection
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {currentProducts.map((product: any) => (
+          {currentProducts.map((product: Product) => (
             <motion.div
               key={product.id}
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white shadow-lg rounded-lg overflow-hidden"
+              className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer"
+              onClick={() => openModal(product)} // Open modal with product details
             >
               <img
                 src={product.thumbnail}
-                alt={product.name}
+                alt={product.subtitle}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
-                <p className="text-gray-600 mb-4">{product.shortDescription}</p>
-                <p className="text-primary font-bold text-lg">
-                  ${product.price}
-                </p>
+                <h3 className="text-xl font-semibold mb-2">
+                  {product.subtitle}
+                </h3>
+                <p className="text-gray-600 mb-4">{product.name}</p>
               </div>
             </motion.div>
           ))}
@@ -77,6 +107,42 @@ const FeaturedProducts = ({ products }: any) => {
           </nav>
         </div>
       </motion.section>
+
+      {/* Modal */}
+      {selectedProduct && (
+        <Modal show={isModalOpen} onClose={closeModal} size="5xl">
+          <Modal.Header>{selectedProduct.title}</Modal.Header>
+          <Modal.Body>
+            <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6">
+              <img
+                src={selectedProduct.thumbnail}
+                alt={selectedProduct.title}
+                className="w-full md:w-1/2 h-64 object-cover rounded-md"
+              />
+              <div className="w-full md:w-1/2 space-y-4">
+                <h3 className="text-xl font-semibold text-gray-600">
+                  {selectedProduct.subtitle}
+                </h3>
+                <p className="text-lg text-gray-700">{selectedProduct.name}</p>
+                <div
+                  className="text-gray-700"
+                  dangerouslySetInnerHTML={{
+                    __html: selectedProduct.longDescription,
+                  }}
+                ></div>
+                <div className="flex justify-end space-x-4 mt-4">
+                  <Button onClick={closeModal} color="success">
+                    Quote Now
+                  </Button>
+                  <Button color="info">
+                    <a href="mailto:info@unitedautointel.com">Contact Us</a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </Modal.Body>
+        </Modal>
+      )}
     </NoSSRWrapper>
   );
 };

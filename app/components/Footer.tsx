@@ -16,26 +16,28 @@ const Footer = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="bg-primary text-white py-12"
+        className="bg-white text-gray-900 py-16 relative"
       >
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 relative z-10">
           {/* Company Information */}
-          <div className="md:col-span-2">
-            <h3 className="text-lg font-semibold mb-4">
-              About United Auto Intl
-            </h3>
-            <p className="text-sm mb-4">
-              United Auto Intl is your trusted source for premium auto spare
-              parts in Dubai. We provide high-quality parts for all major
-              automotive brands with exceptional customer service.
+          <div className="space-y-4">
+            <h1 className="text-red-600 text-4xl uppercase font-bold">
+              United Autos
+            </h1>
+            <p className="text-sm leading-relaxed">
+              SHED -12 365-AL QUOZ IND. SECOND Premise
+              <br />
+              Number: 365099406, PO Box: 24651, Dubai, UAE
             </p>
             <p className="text-sm">
-              Address: Al Quoz, Dubai, UAE
-              <br />
-              Email: info@unitedautoinl.com
-              <br />
-              Phone: +971 123 456 789
+              Phone:{" "}
+              <a href="tel:+97143397110" className="underline">
+                +971 4339 7110
+              </a>
             </p>
+            <button className="bg-primary text-white py-2 px-4 rounded mt-4">
+              Amazon Store
+            </button>
           </div>
 
           {/* Quick Links */}
@@ -43,179 +45,188 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-accent">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-accent">
+                <a href="#" className="hover:text-primary">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent">
-                  Products
+                <a href="#" className="hover:text-primary">
+                  Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-accent">
-                  Testimonials
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-accent">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Customer Service */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Customer Service</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="hover:text-accent">
-                  Shipping Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-accent">
-                  Returns & Exchanges
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-accent">
+                <a href="#" className="hover:text-primary">
                   FAQs
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent">
-                  Order Tracking
+                <a href="#" className="hover:text-primary">
+                  Genuine Auto Parts
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent">
-                  Warranty Information
+                <a href="#" className="hover:text-primary">
+                  Aftermarket Auto Parts
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent">
-                  Contact Support
+                <a href="#" className="hover:text-primary">
+                  Car Care & Accessories
                 </a>
               </li>
-            </ul>
-          </div>
-
-          {/* Information */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Information</h3>
-            <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-accent">
+                <a href="#" className="hover:text-primary">
+                  Buy Cars
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent">
+                <a href="#" className="hover:text-primary">
                   Terms & Conditions
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-accent">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-accent">
-                  Affiliate Program
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-accent">
-                  Press & Media
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-accent">
-                  Corporate Responsibility
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Follow Us */}
-          <div className="lg:col-span-2">
-            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-            <p className="text-sm mb-4">
-              Stay connected with us on social media for the latest updates and
-              special offers.
+          {/* Auto Parts Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Auto Parts</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#" className="hover:text-primary">
+                  BMW
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Audi
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Porsche
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Mercedes
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Volkswagen
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Toyota
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Nissan
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Mazda
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Honda
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Mitsubishi
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Ford
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Chevrolet
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary">
+                  Jeep
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Work Hours */}
+          <div className="lg:col-span-1 md:col-span-2">
+            <h3 className="text-lg font-semibold mb-4">Work Hours</h3>
+            <p className="text-sm leading-relaxed">
+              8:30 AM - 7 PM, Monday - Saturday
+              <br />
+              Our Support and Sales team is available during office hours to
+              answer your queries.
             </p>
-            <div className="flex space-x-4 mb-6">
+            <button className="bg-primary text-white py-2 px-4 rounded mt-4">
+              Get Your Auto Parts
+            </button>
+          </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="border-t border-gray-300 mt-12 pt-6 text-center text-sm relative z-10">
+          <div className="flex flex-col md:flex-row md:justify-between items-center">
+            <p className="text-gray-700">
+              &copy; {new Date().getFullYear()} Noorfhan. All rights reserved.
+            </p>
+            <div className="flex space-x-4 mt-4 md:mt-0">
+              <a href="#" className="hover:text-primary">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-primary">
+                Terms of Service
+              </a>
+              <a href="#" className="hover:text-primary">
+                Contact Us
+              </a>
+            </div>
+            <div className="flex space-x-4 mt-4 md:mt-0">
               <a
                 href="#"
-                className="p-2 bg-accent rounded-full hover:bg-lightGray transition"
+                className="p-2 bg-primary text-white rounded-full hover:bg-accent transition"
               >
                 <FaFacebookF />
               </a>
               <a
                 href="#"
-                className="p-2 bg-accent rounded-full hover:bg-lightGray transition"
+                className="p-2 bg-primary text-white rounded-full hover:bg-accent transition"
               >
                 <FaTwitter />
               </a>
               <a
                 href="#"
-                className="p-2 bg-accent rounded-full hover:bg-lightGray transition"
+                className="p-2 bg-primary text-white rounded-full hover:bg-accent transition"
               >
                 <FaInstagram />
               </a>
               <a
                 href="#"
-                className="p-2 bg-accent rounded-full hover:bg-lightGray transition"
+                className="p-2 bg-primary text-white rounded-full hover:bg-accent transition"
               >
                 <FaLinkedinIn />
               </a>
             </div>
-            <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-            <p className="text-sm mb-4">
-              Subscribe to our newsletter to receive exclusive deals and the
-              latest news about our products.
-            </p>
-            <form>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="p-2 w-full rounded-l-md text-gray-800"
-              />
-              <button className="bg-accent p-2 rounded-r-md hover:bg-lightGray transition">
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-
-        {/* Footer Bottom */}
-        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
-          <p>
-            &copy; {new Date().getFullYear()} United Auto Intl. All rights
-            reserved.
-          </p>
-          <div className="mt-4 space-x-4">
-            <a href="#" className="hover:text-accent">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-accent">
-              Terms of Service
-            </a>
-            <a href="#" className="hover:text-accent">
-              Contact Us
-            </a>
           </div>
         </div>
       </motion.footer>
