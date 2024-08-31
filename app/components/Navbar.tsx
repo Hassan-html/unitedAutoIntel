@@ -104,15 +104,15 @@ const Navbar: React.FC<NavbarProps> = () => {
           {/* Contact Information */}
           <div className="hidden lg:flex items-center gap-4 justify-center">
             <div className="flex items-center text-gray-600">
-              <FaMapMarkerAlt className="mr-2" />
+              <FaMapMarkerAlt className="mr-2 text-red-600" />
               <span>303 al sanabil - Naif - Dubai - United Arab Emirates</span>
             </div>
             <div className="flex items-center text-gray-600">
-              <FaPhone className="mr-2" />
-              <span>+971558981016</span>
+              <FaPhone className="mr-2 text-red-600" />
+              <Link href="tel:+971 558 981 016">+971 558 981 016</Link>
             </div>
             <button className="text-white bg-primary py-2 px-4 rounded">
-              Get Quota
+              Get Quote
             </button>
           </div>
         </div>

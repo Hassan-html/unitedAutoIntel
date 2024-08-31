@@ -87,9 +87,9 @@ const HeroSection = () => {
                   transition={{ duration: 1.4 }}
                   className="max-w-[450px] mb-5 text-[14px] md:text-[18px] lg:text-[20px]"
                 >
-                  At Unite Auto Parts Intl, we specialize in providing a
-                  comprehensive range of genuine and aftermarket auto parts at
-                  competitive wholesale prices.
+                  At United Auto, we specialize in providing a comprehensive
+                  range of genuine and aftermarket auto parts at competitive
+                  wholesale prices.
                 </motion.p>
                 <motion.button
                   initial={{ opacity: 0, scale: 0.8 }}

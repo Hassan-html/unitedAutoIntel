@@ -51,7 +51,7 @@ const Footer = () => {
               </a>
             </p>
             <button className="bg-primary text-white py-2 px-4 rounded mt-4">
-              Get Quota
+              Get Quote
             </button>
           </div>
 
