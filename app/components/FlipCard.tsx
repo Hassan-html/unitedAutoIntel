@@ -9,7 +9,7 @@ interface FlipCardProps {
 const FlipCard = ({ imageSrc, name }: FlipCardProps) => {
   return (
     <>
-      <div className="flip-card">
+      <div className="flip-card justify-self-center">
         <div className="flip-card-inner">
           <div className="flip-card-front flex justify-center items-center">
             <img src={imageSrc} alt="Avatar" style={{ height: "50%" }} />
