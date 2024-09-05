@@ -16,11 +16,25 @@ const Footer = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="bg-white text-gray-900 py-16 relative"
+        className="bg-white text-gray-900 p-16 relative "
       >
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 relative z-10">
           {/* Company Information */}
           <div className="space-y-4">
+            <h2 className="text-primary text-xl uppercase font-bold">
+              Pakistan
+            </h2>
+            <p className="text-sm leading-relaxed">
+              Near Al-Qasim Jamia Masjid, Shop #2, Capital Road, Jinnah Town
+              <br />
+              <span className="font-bold">Number:</span> +92 328 5852875
+            </p>
+            <p className="text-sm">
+              Phone:{" "}
+              <a href="tel:0328 5852875" className="underline">
+                0328 5852875
+              </a>
+            </p>
             <h1 className="text-red-600 text-4xl uppercase font-bold">
               United Auto
             </h1>
@@ -29,21 +43,6 @@ const Footer = () => {
               303 al sanabil - Naif - Dubai - United Arab Emirates
               <br />
               <span className="font-bold">Number</span>: +971 558 981 016
-            </p>
-
-            <h2 className="text-primary text-xl uppercase font-bold">
-              Pakistan
-            </h2>
-            <p className="text-sm leading-relaxed">
-              Near Al-Qasim Jamia Masjid, Shop #2, Capital Road, Jinnah Town
-              <br />
-              <span className="font-bold">Number:</span> 0328 5852875
-            </p>
-            <p className="text-sm">
-              Phone:{" "}
-              <a href="tel:0328 5852875" className="underline">
-                0328 5852875
-              </a>
             </p>
             <button className="bg-primary text-white py-2 px-4 rounded mt-4">
               Get Quote
@@ -77,16 +76,6 @@ const Footer = () => {
               <li>
                 <a href="#" className="hover:text-primary">
                   Aftermarket Auto Parts
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary">
-                  Car Care & Accessories
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary">
-                  Buy Cars
                 </a>
               </li>
               <li>

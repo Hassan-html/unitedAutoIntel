@@ -105,7 +105,9 @@ const Navbar: React.FC<NavbarProps> = () => {
           <div className="hidden lg:flex items-center gap-4 justify-center">
             <div className="flex items-center text-gray-600">
               <FaMapMarkerAlt className="mr-2 text-red-600" />
-              <span>303 al sanabil - Naif - Dubai - United Arab Emirates</span>
+              <Link href="mailto:info@unitedautointl.com">
+                info@unitedautointl.com
+              </Link>
             </div>
             <div className="flex items-center text-gray-600">
               <FaPhone className="mr-2 text-red-600" />

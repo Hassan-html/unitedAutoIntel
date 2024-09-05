@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import SocialMediaIcons from "@/app/components/SocialButtons";
 
-const inter = Noto_Sans({
+const inter = EB_Garamond({
   subsets: ["latin"],
-  weight: ["100", "200", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -52,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden`}>
         <Navbar />
         {children}
         <Footer />
