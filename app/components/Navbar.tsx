@@ -146,7 +146,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             </div>
 
             {/* Desktop Menu */}
-            <nav className="hidden pt-10 pb-5 lg:flex items-center gap-6 justify-center w-full text-sm">
+            <nav className="hidden  p-5 lg:flex items-center gap-6 justify-center w-full text-sm">
               <Link href="/home" className="text-red-600">
                 HOME
               </Link>

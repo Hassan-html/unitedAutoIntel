@@ -63,7 +63,7 @@ const HeroSection = () => {
             exit="exit"
           >
             <div className="flex h-full text-[20px] justify-evenly w-full">
-              <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left text-[20px] w-full p-20">
+              <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left text-[20px] w-[50%] p-20 bg-red-600 text-white">
                 <motion.h1
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ const HeroSection = () => {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1.2 }}
-                  className="text-red-600 mb-5 font-bold text-[18px] md:text-[24px] lg:text-[28px]"
+                  className="text-yellow-200 mb-5 font-bold text-[18px] md:text-[24px] lg:text-[28px]"
                 >
                   "Genuine and Aftermarket Parts for Every Vehicle, Every Need"
                 </motion.h2>
@@ -95,7 +95,7 @@ const HeroSection = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1.6 }}
-                  className="w-fit bg-red-600 p-4 md:p-5 text-white hover:bg-primary rounded-full shadow-lg transition-all duration-300 ease-in-out text-[14px] md:text-[18px]"
+                  className="w-fit bg-yellow-200 p-4 md:p-5  hover:bg-primary text-black rounded-full shadow-lg transition-all duration-300 ease-in-out text-[14px] md:text-[18px]"
                 >
                   Explore Our Inventory
                 </motion.button>

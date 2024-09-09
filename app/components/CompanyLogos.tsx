@@ -58,7 +58,9 @@ const CompanyLogos = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="container mx-auto">
-          <h2 className="text-center text-2xl text-white mb-4">Our Partners</h2>
+          <h2 className="text-center text-2xl text-primary mb-4">
+            Our Partners
+          </h2>
           <Slider {...settings}>
             {shuffledLogos.map((item, index) => (
               <motion.div

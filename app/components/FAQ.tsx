@@ -51,10 +51,10 @@ const FAQSection = () => {
       transition={{ duration: 0.8 }}
       className="container mx-auto py-16"
     >
-      <h2 className="text-4xl font-extrabold text-center mb-4">
+      <h2 className="text-4xl font-extrabold text-center mb-4 text-primary">
         Frequently Asked Questions
       </h2>
-      <p className="text-lg text-center text-gray-600 mb-12">
+      <p className="text-lg text-center  mb-12 text-primary">
         Get answers to the most common questions about car spare parts.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -64,7 +64,7 @@ const FAQSection = () => {
             className="bg-white shadow-md rounded-lg p-6 cursor-pointer"
             onClick={() => toggleFAQ(index)}
           >
-            <h3 className="text-xl font-semibold mb-2 text-primary flex justify-between items-center">
+            <h3 className="text-2xl font-bold mb-2 text-black flex justify-between items-center">
               {faq.question}
               <motion.span
                 initial={{ rotate: 0 }}

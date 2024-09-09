@@ -56,10 +56,10 @@ const FeaturedProducts = ({ products }: FeaturedProductsProps) => {
         transition={{ duration: 0.8 }}
         className="container mx-auto py-16"
       >
-        <h2 className="text-5xl font-extrabold text-center mt-10 uppercase">
+        <h2 className="text-5xl font-extrabold text-center mt-10 uppercase text-primary">
           Explore Some Of Our Quality Parts
         </h2>
-        <h1 className="uppercase text-lg font-extrabold text-center mt-5 mb-20">
+        <h1 className="uppercase text-lg font-extrabold text-center mt-5 mb-20 text-primary">
           Browse From Our Collection
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">

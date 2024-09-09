@@ -134,10 +134,10 @@ const Testimonials = () => {
         transition={{ duration: 0.8 }}
         className="container mx-auto py-16 px-4 sm:px-6 lg:px-8"
       >
-        <h2 className="text-3xl font-bold text-center mt-8 mb-2 uppercase">
+        <h2 className="text-3xl font-bold text-center mt-8 mb-2 uppercase text-primary">
           Testimonials
         </h2>
-        <h2 className="text-lg font-bold text-center mb-10 uppercase">
+        <h2 className="text-primary text-lg font-bold text-center mb-10 uppercase">
           Here's what our customers think about us
         </h2>
         <Slider {...settings}>

@@ -6,10 +6,10 @@ import { FaLocationPin } from "react-icons/fa6";
 const ContactSection = () => {
   return (
     <section>
-      <h2 className="text-5xl font-extrabold text-center mt-10 uppercase">
+      <h2 className="text-5xl font-extrabold text-center mt-10 uppercase text-primary">
         Locations
       </h2>
-      <h1 className="uppercase text-lg font-extrabold text-center mt-5 mb-20">
+      <h1 className="uppercase text-lg font-extrabold text-center mt-5 mb-20 text-primary">
         Our locations across the globe
       </h1>
       <div className="space-y-12">

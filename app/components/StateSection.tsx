@@ -32,7 +32,7 @@ const StatsSection = () => {
           }}
         >
           <div className="container mx-auto">
-            <h2 className="text-6xl font-extrabold text-center text-white mb-20">
+            <h2 className="text-6xl font-extrabold text-center text-white mb-20 ">
               Our Achievements
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
