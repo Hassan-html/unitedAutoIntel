@@ -8,6 +8,7 @@ import {
   FaTwitter,
   FaTimes,
   FaCommentDots,
+  FaInstagram,
 } from "react-icons/fa";
 
 const SocialMediaIcons = () => {
@@ -39,7 +40,7 @@ const SocialMediaIcons = () => {
           className="mt-4 space-y-4"
         >
           <motion.a
-            href="https://facebook.com"
+            href="https://www.facebook.com/share/Q8p9zYjhhvogF8gZ/?mibextid=LQQJ4d"
             className="flex items-center justify-center bg-blue-600 p-3 rounded-full shadow-lg text-white"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -47,7 +48,7 @@ const SocialMediaIcons = () => {
             <FaFacebookF size={20} />
           </motion.a>
           <motion.a
-            href="https://wa.me/1234567890"
+            href="http://wa.me/971558981016"
             className="flex items-center justify-center bg-green-500 p-3 rounded-full shadow-lg text-white"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -55,12 +56,12 @@ const SocialMediaIcons = () => {
             <FaWhatsapp size={20} />
           </motion.a>
           <motion.a
-            href="https://twitter.com"
+            href="https://www.instagram.com/invites/contact/?igsh=st3g7int3a17&utm_content=vl53w82"
             className="flex items-center justify-center bg-blue-400 p-3 rounded-full shadow-lg text-white"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <FaTwitter size={20} />
+            <FaInstagram size={20} />
           </motion.a>
         </motion.div>
       )}
