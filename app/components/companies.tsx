@@ -32,10 +32,10 @@ const FlipCardSection = () => {
 
   return (
     <section className="bg-lightGray py-16">
-      <h2 className="text-5xl font-extrabold text-center mt-10 uppercase text-red-600">
+      <h2 className="text-5xl font-extrabold text-center mt-10 uppercase text-primary">
         Genuine & after market parts
       </h2>
-      <h1 className="uppercase text-lg font-bold  text-center mt-5 mb-20 text-red-600">
+      <h1 className="uppercase text-lg font-bold  text-center mt-5 mb-20 text-primary">
         "Supplying globally"
       </h1>
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">

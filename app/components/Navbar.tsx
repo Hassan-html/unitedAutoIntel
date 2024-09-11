@@ -101,7 +101,7 @@ const Navbar: React.FC<NavbarProps> = () => {
           <div className="justify-self-center col-span-2 flex gap-10 items-center justify-center">
             {/* Logo and Search */}
             <div className="flex items-center gap-4 justify-end">
-              <div className="logo uppercase text-red-600 text-2xl font-bold flex flex-nowrap justify-center items-center">
+              <div className="logo uppercase  text-2xl font-bold flex flex-nowrap justify-center items-center">
                 <img src={companyDetails.logo} alt="logo" width="100px" />
               </div>
               <div className="input-Group hidden lg:flex items-center bg-white overflow-hidden border border-primary w-[300px]">

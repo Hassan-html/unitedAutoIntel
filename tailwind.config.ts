@@ -12,7 +12,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#F80000", // red
+        primary: "#091841FFFF", // red
         secondary: "#6C757D", // Gray
         accent: "#021B4B", // Bright Red
         background: "#F7F7F7", // Light Gray
