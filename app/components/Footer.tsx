@@ -4,6 +4,7 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import NoSSRWrapper from "@/utils/NoSSRWrapper";
@@ -199,28 +200,22 @@ const Footer = () => {
             </div>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a
-                href="#"
+                href="https://www.facebook.com/share/Q8p9zYjhhvogF8gZ/?mibextid=LQQJ4d"
                 className="p-2 bg-primary text-white rounded-full hover:bg-accent transition"
               >
                 <FaFacebookF />
               </a>
               <a
-                href="#"
+                href="http://wa.me/971558981016"
                 className="p-2 bg-primary text-white rounded-full hover:bg-accent transition"
               >
-                <FaTwitter />
+                <FaWhatsapp />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/invites/contact/?igsh=st3g7int3a17&utm_content=vl53w82"
                 className="p-2 bg-primary text-white rounded-full hover:bg-accent transition"
               >
                 <FaInstagram />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-primary text-white rounded-full hover:bg-accent transition"
-              >
-                <FaLinkedinIn />
               </a>
             </div>
           </div>
