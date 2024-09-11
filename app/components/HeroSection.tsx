@@ -68,7 +68,7 @@ const HeroSection = () => {
                 src="/images/slider/SpareParts.svg"
                 alt="spareParts"
               />
-              <div className=" absolute z-10 top-[40%] lg:top-[30%] flex flex-col lg:gap-[10px] gap-2">
+              <div className=" absolute z-10 top-[41%] lg:top-[30%] flex flex-col lg:gap-[10px] gap-2">
                 <h1 className="text-sm font-extrabold uppercase md:text-[40px] lg:text-[70px] text-center justify-center items-center">
                   United Autos
                 </h1>
