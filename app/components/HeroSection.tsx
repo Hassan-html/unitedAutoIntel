@@ -70,7 +70,7 @@ const HeroSection = () => {
               />
               <div className=" absolute z-10 top-[41%] lg:top-[30%] flex flex-col lg:gap-[10px] gap-2">
                 <h1 className="text-sm font-extrabold uppercase md:text-[40px] lg:text-[70px] text-center justify-center items-center">
-                  United Autos
+                  United Auto
                 </h1>
                 <p className="text-center text-highlight text-opacity-75 font-bold lg:mt-[20px] lg:text-[40px]">
                   WholeSale Auto Parts Delears
