@@ -43,8 +43,7 @@ const HeroSection = () => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoPlay: true,
-    autoplayspeed: 500,
+
     pauseOnHover: true,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
