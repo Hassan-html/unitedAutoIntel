@@ -43,14 +43,15 @@ const HeroSection = () => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-
+    autoplay: true, // Autoplay the slides
+    autoplaySpeed: 5000, // 5 seconds between slides
     pauseOnHover: true,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
   };
 
   return (
-    <NoSSRWrapper>
+    <>
       <div className="h-screen overflow-hidden relative">
         <Slider {...settings} className="flex items-center justify-center">
           {/* Slide 1 */}
@@ -67,8 +68,8 @@ const HeroSection = () => {
                 src="/images/slider/SpareParts.svg"
                 alt="spareParts"
               />
-              <div className=" absolute z-10 top-[41%] lg:top-[30%] flex flex-col lg:gap-[10px] gap-2">
-                <h1 className="text-sm font-extrabold uppercase md:text-[40px] lg:text-[70px] text-center justify-center items-center">
+              <div className=" absolute bg-white w-full  md:bg-transparent z-10 top-[41%] md:top-[30%] flex flex-col md:gap-[10px] gap-2">
+                <h1 className="text-2xl font-extrabold uppercase  md:text-[70px] text-center justify-center items-center">
                   United Auto
                 </h1>
                 <p className="text-center text-highlight text-opacity-75 font-bold lg:mt-[20px] lg:text-[40px]">
@@ -91,12 +92,12 @@ const HeroSection = () => {
           >
             <div className="relative flex h-full text-[20px] justify-evenly w-full">
               <img
-                className="w-full h-full"
+                className="w-full h-full translate-y-[20px] "
                 src="/images/slider/genuine.svg"
                 alt="spareParts"
               />
-              <div className=" absolute z-10 top-[40%] lg:top-[45%] flex flex-col lg:gap-[10px] gap-2">
-                <h1 className="text-sm font-extrabold uppercase md:text-[40px] lg:text-[50px] text-center text-wrap">
+              <div className=" absolute w-full bg-white md:bg-transparent z-10 top-[47%] md:top-[40%] lg:top-[45%] flex flex-col lg:gap-[10px] gap-2 justify-center items-center transition-all">
+                <h1 className="text-2xl font-extrabold uppercase md:text-[40px] lg:text-[50px] text-center text-wrap">
                   Genuine & After Market Parts
                 </h1>
                 <p className="text-center text-highlight text-opacity-75 font-bold lg:mt-[20px] lg:text-[40px]">
@@ -123,8 +124,8 @@ const HeroSection = () => {
                 src="/images/slider/export.svg"
                 alt="spareParts"
               />
-              <div className=" absolute z-10 top-[40%] lg:top-[35%] flex flex-col lg:gap-[10px] gap-2 bg-white h-fit p-10">
-                <h1 className="text-sm font-extrabold uppercase md:text-[40px] lg:text-[50px] text-center text-wrap">
+              <div className=" absolute z-10 top-[45%] lg:top-[35%] flex flex-col lg:gap-[10px] gap-2 bg-white h-fit p-10">
+                <h1 className="text-2xl font-extrabold uppercase md:text-[40px] lg:text-[50px] text-center text-wrap">
                   Exporting in number of gulf Countries
                 </h1>
                 <p className="text-center text-highlight text-opacity-75 font-bold lg:mt-[20px] lg:text-[40px]">
@@ -138,7 +139,7 @@ const HeroSection = () => {
           </motion.div>
         </Slider>
       </div>
-    </NoSSRWrapper>
+    </>
   );
 };
 

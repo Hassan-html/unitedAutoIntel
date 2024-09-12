@@ -1,19 +1,47 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { FaSearch, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaSearch,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 import { fetchCompanyDetails } from "@/utils/information";
 import "./Nav.css";
+
 // Type declarations for the component state and props
 interface companyDetails {
   logo: string;
 }
 
+interface SearchItem {
+  code: string;
+  name: string;
+}
+
 const Navbar: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [filteredItems, setFilteredItems] = useState<SearchItem[]>([]); // State for search results
   const [companyDetails, setCompanyDetails] = useState<companyDetails>({
     logo: "",
   });
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // State for mobile menu
+
+  // Sample items to search
+  const searchItems: SearchItem[] = [
+    { code: "P001", name: "Pistons" },
+    { code: "C002", name: "Camshaft" },
+    { code: "CR003", name: "Crankshaft" },
+    { code: "V004", name: "Valves" },
+    { code: "G005", name: "Gaskets" },
+    { code: "BP006", name: "Brake Pads" },
+    { code: "D007", name: "Discs" },
+    { code: "C008", name: "Calipers" },
+    { code: "ABS009", name: "ABS Sensors" },
+    { code: "S010", name: "Shocks" },
+  ];
 
   // Fetch company details (e.g., logo)
   const companyDetailFetch = async () => {
@@ -25,17 +53,35 @@ const Navbar: React.FC = () => {
     companyDetailFetch();
   }, []);
 
+  // Handle search query and filter results
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
+    const query = e.target.value;
+    setSearchQuery(query);
+
+    if (query) {
+      const results = searchItems.filter(
+        (item) =>
+          item.name.toLowerCase().includes(query.toLowerCase()) ||
+          item.code.toLowerCase().includes(query.toLowerCase())
+      );
+      setFilteredItems(results);
+    } else {
+      setFilteredItems([]);
+    }
+  };
+
+  // Toggle menu state for mobile view
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className="fixed top-0 z-10 w-full p-4 bg-white shadow-md">
+    <header className="fixed top-0 z-10 w-full p-4 bg-white shadow-md transition-all duration-500">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo (Round Image) */}
         <div className="flex items-center w-[60%]">
           {companyDetails?.logo && (
-            <div className="logo rounded-full overflow-hidden w-16 h-16 border">
+            <div className="logo  overflow-hidden w-16 h-16 border">
               <img
                 src={companyDetails.logo}
                 alt="logo"
@@ -57,10 +103,33 @@ const Navbar: React.FC = () => {
               <FaSearch />
             </button>
           </div>
+
+          {/* Dropdown for Search Results */}
+          {filteredItems.length > 0 && (
+            <div className="absolute bg-white top-[100%] shadow-lg rounded-lg mt-4 w-full left-0 text-sm text-black p-4 z-50">
+              <ul>
+                {filteredItems.map((item, index) => (
+                  <li
+                    key={index}
+                    className="py-2 hover:bg-gray-200 cursor-pointer"
+                  >
+                    <span className="font-bold">{item.code}:</span> {item.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden">
+          <button onClick={toggleMenu} className="text-2xl text-red-600">
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
         </div>
 
         {/* Contact Information */}
-        <div className="flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           <div className="flex items-center text-gray-600">
             <FaMapMarkerAlt className="mr-2 text-red-600" />
             <Link
@@ -85,7 +154,11 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Dropdown Menu */}
-      <nav className="flex justify-center gap-6 mt-4">
+      <nav
+        className={`lg:flex justify-center gap-6 mt-4 lg:static absolute bg-white w-full left-0 transition-transform transform ${
+          isMenuOpen ? "translate-x-0" : "-translate-x-[200%]"
+        } lg:translate-x-0`}
+      >
         {/* Main Nav Links */}
         <Link href="/home" className="nav-link">
           HOME
