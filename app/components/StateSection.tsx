@@ -100,7 +100,6 @@ const StatsSection = () => {
               </div>
             </div>
           </div>
-          <div className="absolute z-[0] bg-primary bg-opacity-0 w-full h-full"></div>
         </motion.section>
       )}
     </>

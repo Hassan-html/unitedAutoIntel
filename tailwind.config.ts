@@ -12,22 +12,38 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#091841FFFF", // red
-        secondary: "#6C757D", // Gray
-        accent: "#021B4B", // Bright Red
-        background: "#F7F7F7", // Light Gray
-        highlight: "#FF0000", // Bright Orange
-        teal: "#008080", // Teal
-        textDark: "#343A40", // Dark Gray for text
-        textLight: "#FFFFFF", // White for text
+        primary: {
+          light: "#449FF4FF",
+          DEFAULT: "#023E8DFF",
+          dark: "#021736FF",
+        },
+        secondary: {
+          light: "#F5A623",
+          DEFAULT: "#F2994A",
+          dark: "#D97706",
+        },
+        accent: {
+          light: "#22D3EE",
+          DEFAULT: "#06B6D4",
+          dark: "#0891B2",
+        },
+        background: "#F9FAFB",
+        cardBg: "#FFFFFF",
+        cardBorder: "#E5E7EB",
+        textPrimary: "#1F2937",
+        textSecondary: "#4B5563",
       },
-      fontFamily: {
-        sans: ["Inter", "sans-serif"],
+      borderRadius: {
+        lg: "12px",
+        xl: "16px",
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      boxShadow: {
+        card: "0 4px 12px rgba(0, 0, 0, 0.1)",
+        button: "0 6px 12px rgba(0, 0, 0, 0.15)",
+      },
+      transitionTimingFunction: {
+        "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
+        "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
       },
     },
   },

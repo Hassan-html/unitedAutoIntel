@@ -3,6 +3,7 @@ import NoSSRWrapper from "@/utils/NoSSRWrapper";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import AnimatedButton from "@/app/components/AnimatedButton"; // Import the Animated Button component
 
 // Custom Arrow Components
 const CustomNextArrow = (props: any) => {
@@ -43,8 +44,8 @@ const HeroSection = () => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, // Autoplay the slides
-    autoplaySpeed: 5000, // 5 seconds between slides
+    autoplay: true,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
@@ -62,22 +63,26 @@ const HeroSection = () => {
             animate="animate"
             exit="exit"
           >
-            <div className="relative flex h-full text-[20px] justify-evenly w-full">
+            <div className="relative flex h-full justify-evenly w-full">
               <img
                 className="w-full h-full"
                 src="/images/slider/SpareParts.svg"
                 alt="spareParts"
               />
-              <div className=" absolute bg-white w-full  md:bg-transparent z-10 top-[41%] md:top-[30%] flex flex-col md:gap-[10px] gap-2">
-                <h1 className="text-2xl font-extrabold uppercase  md:text-[70px] text-center justify-center items-center">
+              <div className="absolute bg-white bg-opacity-80 w-full md:w-auto p-8 rounded-lg z-10 top-[45%] md:top-[30%] flex flex-col items-center">
+                <h1 className="text-4xl md:text-[70px] font-bold text-center text-primary uppercase mb-2 md:mb-6">
                   United Auto
                 </h1>
-                <p className="text-center text-highlight text-opacity-75 font-bold lg:mt-[20px] lg:text-[40px]">
-                  WholeSale Auto Parts Delears
+                <p className="text-highlight text-lg md:text-[40px] font-bold mb-2">
+                  Wholesale Auto Parts Dealers
                 </p>
-                <p className="text-primary text-center">
+                <p className="text-primary text-center mb-4 md:mb-6">
                   Providing quality parts to our customers.
                 </p>
+                {/* Animated Button */}
+                <AnimatedButton onClick={() => window.scrollTo(0, 500)}>
+                  Explore Products
+                </AnimatedButton>
               </div>
             </div>
           </motion.div>
@@ -90,22 +95,26 @@ const HeroSection = () => {
             animate="animate"
             exit="exit"
           >
-            <div className="relative flex h-full text-[20px] justify-evenly w-full">
+            <div className="relative flex h-full justify-evenly w-full">
               <img
-                className="w-full h-full translate-y-[20px] "
+                className="w-full h-full"
                 src="/images/slider/genuine.svg"
                 alt="spareParts"
               />
-              <div className=" absolute w-full bg-white md:bg-transparent z-10 top-[47%] md:top-[40%] lg:top-[45%] flex flex-col lg:gap-[10px] gap-2 justify-center items-center transition-all">
-                <h1 className="text-2xl font-extrabold uppercase md:text-[40px] lg:text-[50px] text-center text-wrap">
+              <div className="absolute bg-white bg-opacity-80 w-full md:w-auto p-8 rounded-lg z-10 top-[45%] md:top-[40%] flex flex-col items-center">
+                <h1 className="text-4xl md:text-[50px] font-bold text-center text-primary uppercase mb-2 md:mb-4">
                   Genuine & After Market Parts
                 </h1>
-                <p className="text-center text-highlight text-opacity-75 font-bold lg:mt-[20px] lg:text-[40px]">
-                  WholeSale Auto Parts Delears
+                <p className="text-highlight text-lg md:text-[40px] font-bold mb-2">
+                  Wholesale Auto Parts Dealers
                 </p>
-                <p className="text-primary text-center">
+                <p className="text-primary text-center mb-4 md:mb-6">
                   Providing quality parts to our customers.
                 </p>
+                {/* Animated Button */}
+                <AnimatedButton onClick={() => window.scrollTo(0, 800)}>
+                  Learn More
+                </AnimatedButton>
               </div>
             </div>
           </motion.div>
@@ -118,22 +127,26 @@ const HeroSection = () => {
             animate="animate"
             exit="exit"
           >
-            <div className="relative flex h-full text-[20px] justify-evenly w-full">
+            <div className="relative flex h-full justify-evenly w-full">
               <img
                 className="w-full h-full"
                 src="/images/slider/export.svg"
                 alt="spareParts"
               />
-              <div className=" absolute z-10 top-[45%] lg:top-[35%] flex flex-col lg:gap-[10px] gap-2 bg-white h-fit p-10">
-                <h1 className="text-2xl font-extrabold uppercase md:text-[40px] lg:text-[50px] text-center text-wrap">
-                  Exporting in number of gulf Countries
+              <div className="absolute bg-white bg-opacity-80 w-full md:w-auto p-8 rounded-lg z-10 top-[45%] md:top-[35%] flex flex-col items-center">
+                <h1 className="text-4xl md:text-[50px] font-bold text-center text-primary uppercase mb-2 md:mb-4">
+                  Exporting in Gulf Countries
                 </h1>
-                <p className="text-center text-highlight text-opacity-75 font-bold lg:mt-[20px] lg:text-[40px]">
-                  WholeSale Auto Parts Delears
+                <p className="text-highlight text-lg md:text-[40px] font-bold mb-2">
+                  Wholesale Auto Parts Dealers
                 </p>
-                <p className="text-primary text-center">
+                <p className="text-primary text-center mb-4 md:mb-6">
                   Providing quality parts to our customers.
                 </p>
+                {/* Animated Button */}
+                <AnimatedButton onClick={() => window.scrollTo(0, 1000)}>
+                  Contact Us
+                </AnimatedButton>
               </div>
             </div>
           </motion.div>

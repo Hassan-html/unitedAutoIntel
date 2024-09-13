@@ -1,101 +1,78 @@
 "use client";
 import { motion } from "framer-motion";
-import NoSSRWrapper from "@/utils/NoSSRWrapper";
+import SectionHeading from "./SectionHeading";
+import { FaTruck, FaTools, FaShippingFast } from "react-icons/fa"; // Using icons as examples
 
 const WhyChooseUs = () => {
   return (
-    <NoSSRWrapper>
+    <>
       <motion.section
         id="why-choose-us"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="container mx-auto py-16 px-6  font-extrabold  w-full"
+        className="container mx-auto py-20 px-6 w-full bg-gradient-to-r from-gray-50 to-gray-100"
       >
-        <h2 className="text-5xl font-extrabold my-10 text-center text-primary">
-          What You Need To Know About Us
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Left Section */}
+        {/* New Section Heading */}
+        <SectionHeading
+          title="Why Choose Us"
+          subtitle="Your trusted partner for 100% genuine and aftermarket auto parts."
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          {/* Left Section with Icons */}
           <motion.div
-            initial={{ x: -100 }}
-            whileInView={{ x: 0 }}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-12"
           >
-            <h3 className="text-3xl font-extrabold mb-4">
-              Exporters of 100% Genuine Auto Parts
-            </h3>
-            <p className="text-lg leading-relaxed">
-              We specialize in exporting authentic auto parts for a wide range
-              of brands, including:
-            </p>
-            <ul className="list-disc list-inside text-left">
-              Toyota Nissan Isuzu Honda Ford Chevrolet MG Suzuki Mazda
-              Mitsubishi Lexus Hyundai And many more...
-            </ul>
+            <div className="flex items-start space-x-4">
+              <FaTools className="text-textPrimary text-4xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-textPrimary mb-2">
+                  Exporters of 100% Genuine Auto Parts
+                </h3>
+                <p className="text-base text-textSecondary">
+                  We specialize in exporting authentic auto parts for a wide
+                  range of brands, including Toyota, Nissan, Honda, and more.
+                </p>
+              </div>
+            </div>
 
-            <h3 className="text-3xl font-extrabold mb-4 mt-8">
-              Aftermarket Parts from Top Brands
-            </h3>
-            <p className="text-lg leading-relaxed">
-              We supply high-quality aftermarket parts from trusted brands like:
-            </p>
-            <ul className="list-disc list-inside text-left">
-              AISIN KYB DENSO RBI TOKICO KOYO NSK LUK NGK And many more...
-            </ul>
+            <div className="flex items-start space-x-4">
+              <FaTruck className="text-textPrimary text-4xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-textPrimary mb-2">
+                  Wholesale Only
+                </h3>
+                <p className="text-base text-textSecondary">
+                  We handle bulk orders, ensuring the best value for large-scale
+                  purchases.
+                </p>
+              </div>
+            </div>
 
-            <h3 className="text-3xl font-extrabold mb-4 mt-8">
-              Wholesale Only
-            </h3>
-            <ul className="list-disc list-inside text-left">
-              <li>We handle bulk orders, no retail sales.</li>
-              <li>Best value for large-scale purchases.</li>
-            </ul>
-
-            <h3 className="text-3xl font-extrabold mb-4 mt-8">
-              Global Shipping Expertise
-            </h3>
-            <p className="text-lg leading-relaxed">
-              Our extensive experience in international shipping ensures that
-              your products arrive safely and on time. We provide:
-            </p>
-            <ul className="list-disc list-inside text-left">
-              <li>Door-to-door delivery worldwide</li>
-              <li>
-                Experience shipping to Saudi Arabia, Yemen, Libya, Iraq, and
-                more
-              </li>
-              <li>Jebel Ali Port as the main hub for reliable logistics</li>
-              <li>Flexible shipping options: FCL, LCL, air cargo</li>
-            </ul>
-
-            <h3 className="text-3xl font-extrabold mb-4 mt-8">
-              Efficient and Timely Delivery
-            </h3>
-            <p className="text-lg leading-relaxed">
-              Whether by sea or air, we prioritize safe and on-time delivery to
-              meet your business needs.
-            </p>
-
-            <button
-              className="mt-6 px-6 py-3 bg-highlight hover:bg-primary  text-white rounded-lg shadow-lg transform transition-transform hover:translate-y-1 hover:shadow-2xl"
-              style={{
-                perspective: "1000px",
-                transformStyle: "preserve-3d",
-                backfaceVisibility: "hidden",
-              }}
-            >
-              Explore Our Products
-            </button>
+            <div className="flex items-start space-x-4">
+              <FaShippingFast className="text-textPrimary text-4xl" />
+              <div>
+                <h3 className="text-2xl font-semibold text-textPrimary mb-2">
+                  Global Shipping Expertise
+                </h3>
+                <p className="text-base text-textSecondary">
+                  We provide flexible shipping options, including FCL, LCL, and
+                  air cargo, to ensure timely and safe delivery worldwide.
+                </p>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Right Section */}
+          {/* Right Section: Image */}
           <motion.div
-            initial={{ x: 100 }}
-            whileInView={{ x: 0 }}
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="h-fit sticky top-[100px]"
@@ -103,12 +80,12 @@ const WhyChooseUs = () => {
             <img
               src="/images/imTPwrk.jpg"
               alt="Quality Auto Parts"
-              className="rounded-lg shadow-md"
+              className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             />
           </motion.div>
         </div>
       </motion.section>
-    </NoSSRWrapper>
+    </>
   );
 };
 

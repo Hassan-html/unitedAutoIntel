@@ -12,10 +12,11 @@ nav {
   transition: color 0.3s ease, transform 0.3s ease;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 .nav-link:hover {
-  color: #e63946;
+  @apply text-primary;
 }
 
 /* Dropdown Content */
@@ -54,7 +55,7 @@ nav {
 
 .dropdown-item:hover {
   background-color: #f8f8f8;
-  color: #e63946;
+  @apply text-primary-light;
 }
 
 /* Responsive Text for Contact Info */

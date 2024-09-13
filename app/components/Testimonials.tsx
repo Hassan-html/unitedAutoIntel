@@ -3,6 +3,7 @@ import NoSSRWrapper from "@/utils/NoSSRWrapper";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
+import SectionHeading from "./SectionHeading";
 
 const testimonials = [
   {
@@ -134,12 +135,11 @@ const Testimonials = () => {
         transition={{ duration: 0.8 }}
         className="container mx-auto py-16 px-4 sm:px-6 lg:px-8"
       >
-        <h2 className="text-3xl font-bold text-center mt-8 mb-2 uppercase text-primary">
-          Testimonials
-        </h2>
-        <h2 className="text-primary text-lg font-bold text-center mb-10 uppercase">
-          Here's what our customers think about us
-        </h2>
+        <SectionHeading
+          title="Testimonials"
+          subtitle="Here's what our customers think about us"
+        />
+
         <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
             <motion.div
