@@ -44,9 +44,7 @@ export default function HomePage() {
   return (
     <main>
       <HeroSection />
-      <FeaturedProducts
-        products={products.filter((product) => product.featured)}
-      />
+      <FeaturedProducts />
       <FlipCardSection />
 
       <WhyChooseUs />
