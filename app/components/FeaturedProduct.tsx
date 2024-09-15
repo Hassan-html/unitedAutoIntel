@@ -167,8 +167,7 @@ const FeaturedProducts = () => {
                 {/* Add to Cart Button */}
                 <div className="flex items-center justify-between">
                   <button className="bg-primary text-white py-2 px-4 rounded w-full flex items-center justify-center gap-2 hover:bg-accent transition">
-                    <FaCartPlus />
-                    Add to Cart
+                    Browse
                   </button>
                 </div>
               </div>
@@ -227,8 +226,13 @@ const FeaturedProducts = () => {
                   <Button onClick={closeModal} color="success">
                     Quote Now
                   </Button>
-                  <Button color="info">
-                    <a href="mailto:info@unitedautointl.com">Contact Us</a>
+                  <Button className="bg-primary text-white">
+                    <a
+                      className="text-white"
+                      href="mailto:info@unitedautointl.com"
+                    >
+                      Contact Us
+                    </a>
                   </Button>
                 </div>
               </div>

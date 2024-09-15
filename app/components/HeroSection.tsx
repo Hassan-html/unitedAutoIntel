@@ -65,8 +65,8 @@ const HeroSection = () => {
           >
             <div className="relative flex h-full justify-evenly w-full">
               <img
-                className="w-full h-full"
-                src="/images/slider/SpareParts.svg"
+                className=" h-full"
+                src="/images/slider/sparePartsOrignal.jpeg"
                 alt="spareParts"
               />
               <div className="absolute bg-white bg-opacity-80 w-full md:w-auto p-8 rounded-lg z-10 top-[45%] md:top-[30%] flex flex-col items-center">
@@ -97,13 +97,13 @@ const HeroSection = () => {
           >
             <div className="relative flex h-full justify-evenly w-full">
               <img
-                className="w-full h-full"
-                src="/images/slider/genuine.svg"
+                className=" h-full"
+                src="/images/slider/genuineOrignal.jpeg"
                 alt="spareParts"
               />
               <div className="absolute bg-white bg-opacity-80 w-full md:w-auto p-8 rounded-lg z-10 top-[45%] md:top-[40%] flex flex-col items-center">
                 <h1 className="text-4xl md:text-[50px] font-bold text-center text-primary uppercase mb-2 md:mb-4">
-                  Genuine & After Market Parts
+                  Genuine & AfterMarket Parts
                 </h1>
                 <p className="text-highlight text-lg md:text-[40px] font-bold mb-2">
                   Wholesale Auto Parts Dealers
@@ -129,7 +129,7 @@ const HeroSection = () => {
           >
             <div className="relative flex h-full justify-evenly w-full">
               <img
-                className="w-full h-full"
+                className=" h-full"
                 src="/images/slider/export.svg"
                 alt="spareParts"
               />

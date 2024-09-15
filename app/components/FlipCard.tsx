@@ -8,15 +8,27 @@ interface FlipCardProps {
 
 const FlipCard = ({ imageSrc, name }: FlipCardProps) => {
   return (
-    <div className="flip-card justify-self-center">
+    <div className="flip-card justify-self-center p-2">
       <div className="flip-card-inner">
         {/* Front of the Card */}
-        <div className="flip-card-front flex justify-center items-center">
+        <div className="flip-card-front flex justify-between items-center gap-2">
           <img
             src={imageSrc}
             alt={name}
-            className="h-[80%] object-cover rounded-md shadow-md"
+            className={` ${
+              name == "Mitsubishi" ||
+              name == "Honda" ||
+              name == "Nissan" ||
+              name == "Mazda" ||
+              name == "MG" ||
+              name == "LUK"
+                ? "h-[60%]"
+                : "w-[50%]"
+            }  object-cover rounded-md shadow-md`}
           />
+          <p className="font-bold text-textPrimary uppercase text-left w-fit">
+            {name}
+          </p>
         </div>
 
         {/* Back of the Card */}

@@ -7,19 +7,25 @@ import {
   FaMapMarkerAlt,
   FaBars,
   FaTimes,
-  FaShoppingCart,
-  FaUserCircle,
-  FaBell,
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
+  FaWhatsapp,
+  FaMailBulk,
 } from "react-icons/fa";
+import { FaEarthEurope } from "react-icons/fa6"; // Icon for language switcher
 import { fetchCompanyDetails } from "@/utils/information";
 import "./Nav.css";
+import { CgMail } from "react-icons/cg";
 
 // Type declarations for the component state and props
 interface companyDetails {
   logo: string;
+}
+declare global {
+  interface Window {
+    google: any;
+    googleTranslateElementInit: any;
+  }
 }
 
 interface SearchItem {
@@ -57,6 +63,45 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     companyDetailFetch();
+
+    // Load Google Translate Script
+    const script = document.createElement("script");
+    script.src =
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    script.async = true;
+    document.body.appendChild(script);
+
+    if (!document.getElementById("google_translate_script")) {
+      const script = document.createElement("script");
+      script.src =
+        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.id = "google_translate_script"; // Add an ID to the script tag to identify it
+      script.async = true;
+      document.body.appendChild(script);
+    }
+
+    window.googleTranslateElementInit = () => {
+      // Check if the Google Translate element is already initialized
+      if (
+        !document.getElementById("google_translate_element")?.innerHTML.trim()
+      ) {
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,fr,de,ar,es,it,hi,zh-CN,ja,tr", // Popular languages for Gulf, Europe, and Asia
+            layout:
+              window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    };
+
+    return () => {
+      // Cleanup the script when the component unmounts
+      document.body.removeChild(script);
+      window.googleTranslateElementInit = undefined;
+    };
   }, []);
 
   // Handle search query and filter results
@@ -83,9 +128,9 @@ const Navbar: React.FC = () => {
 
   return (
     <header className="fixed top-0 z-50 w-full p-4 bg-white shadow-md transition-all duration-500">
-      <div className="container mx-auto flex justify-between items-center ">
+      <div className="container mx-auto flex justify-between items-center">
         {/* Logo and Search Bar */}
-        <div className="flex items-center w-full lg:w-[60%] ">
+        <div className="flex items-center w-full lg:w-[60%]">
           {companyDetails?.logo && (
             <div className="logo w-[50px] h-[50px] overflow-hidden border border-gray-200 shadow-lg">
               <img
@@ -99,7 +144,7 @@ const Navbar: React.FC = () => {
           {/* Search Bar */}
           <div className="ml-6 hidden lg:flex items-center border border-gray-300 rounded-md overflow-hidden h-[40px] w-full">
             <input
-              className="bg-transparent outline-none border-none w-full px-4 py-2 text-sm "
+              className="bg-transparent outline-none border-none w-full px-4 py-2 text-sm"
               type="text"
               placeholder="Search for part numbers or code.."
               value={searchQuery}
@@ -136,37 +181,51 @@ const Navbar: React.FC = () => {
 
         {/* Right Section */}
         <div className="hidden lg:flex items-center gap-8">
-          {/* User and Notifications */}
+          {/* Email and Phone */}
           <div className="flex items-center gap-6">
-            <button className="flex items-center bg-gray-100 p-2 rounded-full shadow-lg transition-transform transform hover:scale-105">
-              <FaBell className="text-lg text-primary" />
-              <span className="ml-2 text-sm font-medium">2</span>
-            </button>
-            <button className="flex items-center bg-gray-100 p-2 rounded-full shadow-lg transition-transform transform hover:scale-105">
-              <FaUserCircle className="text-lg text-primary" />
-              <span className="ml-2 text-sm font-medium">Account</span>
-            </button>
+            <a
+              href="mailto:info@unitedautointl.com"
+              className="flex items-center gap-2"
+            >
+              <CgMail className="text-lg text-primary" />
+            </a>
+            <a href="tel:+971558981016" className="flex items-center gap-2">
+              <FaPhone className="text-lg text-primary" />
+            </a>
+          </div>
+
+          {/* Google Translate Dropdown */}
+          <div className="flex items-center gap-2">
+            <div
+              id="google_translate_element"
+              className="text-right flex-nowrap"
+            ></div>
           </div>
 
           {/* Social Media Icons */}
           <div className="flex items-center gap-4">
-            <a href="#" className="text-gray-600 hover:text-primary">
+            <a
+              href="https://www.facebook.com/share/Q8p9zYjhhvogF8gZ/?mibextid=LQQJ4d"
+              className="text-gray-600 hover:text-primary"
+            >
               <FaFacebookF />
             </a>
-            <a href="#" className="text-gray-600 hover:text-primary">
-              <FaTwitter />
+            <a
+              href="http://wa.me/971558981016"
+              className="text-gray-600 hover:text-primary"
+            >
+              <FaWhatsapp />
             </a>
-            <a href="#" className="text-gray-600 hover:text-primary">
+            <a
+              href="https://www.instagram.com/invites/contact/?igsh=st3g7int3a17&utm_content=vl53w82"
+              className="text-gray-600 hover:text-primary"
+            >
               <FaInstagram />
             </a>
           </div>
 
-          {/* Cart and Quote Button */}
+          {/* Get Quote Button */}
           <div className="flex items-center gap-4">
-            <button className="flex items-center bg-gray-100 p-2 rounded-full shadow-lg transition-transform transform hover:scale-105">
-              <FaShoppingCart className="text-lg text-primary" />
-              <span className="ml-2 text-sm font-medium">3</span>
-            </button>
             <button className="bg-primary text-white py-2 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105">
               Get Quote
             </button>

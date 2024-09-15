@@ -51,6 +51,7 @@ const CompanyLogos = () => {
   return (
     <>
       <motion.section
+        className="mt-[100px]"
         id="company-logos"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

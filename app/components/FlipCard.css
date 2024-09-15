@@ -1,9 +1,9 @@
 /* The flip card container */
 .flip-card {
   background-color: transparent;
-  width: 320px;
-  height: 220px;
-  perspective: 1200px; /* Increased for more depth */
+  width: 250px;
+  height: 120px;
+  perspective: 1800px; /* Increased for more depth */
   transition: transform 0.6s ease-in-out;
 }
 

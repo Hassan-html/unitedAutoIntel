@@ -4,6 +4,31 @@ nav {
   position: relative;
 }
 
+#google_translate_element {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  padding: 2px;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+}
+#google_translate_element .goog-te-gadget-simple {
+  border: none !important;
+  width: fit-content !important;
+  height: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+#google_translate_element .VIpgJd-ZVi9od-xl07Ob-lTBxed {
+  display: flex !important;
+  height: fit-content;
+  flex-wrap: nowrap;
+}
+
 .nav-link {
   padding: 0.5rem 1rem;
   font-size: 1rem;
