@@ -132,11 +132,11 @@ const Navbar: React.FC = () => {
         {/* Logo and Search Bar */}
         <div className="flex items-center w-full lg:w-[60%]">
           {companyDetails?.logo && (
-            <div className="logo w-[50px] h-[50px] overflow-hidden border border-gray-200 shadow-lg">
+            <div className="logo w-fit h-[50px]  border border-gray-200 shadow-lg">
               <img
                 src={companyDetails.logo}
                 alt="logo"
-                className="object-cover w-full h-full"
+                className="object-cover h-full "
               />
             </div>
           )}
