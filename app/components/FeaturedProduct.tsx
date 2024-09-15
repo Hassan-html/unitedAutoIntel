@@ -213,9 +213,7 @@ const FeaturedProducts = () => {
                   {selectedProduct.subtitle}
                 </h3>
                 <p className="text-lg text-gray-700">{selectedProduct.name}</p>
-                <p className="text-lg font-bold text-primary">
-                  ${selectedProduct.price.toFixed(2)}
-                </p>
+
                 <div
                   className="text-gray-700"
                   dangerouslySetInnerHTML={{
