@@ -35,7 +35,7 @@ const FlipCardSection = () => {
     <section className="bg-lightGray py-16">
       {/* Enhanced Section Heading */}
       <SectionHeading
-        title="Genuine & After Market Parts"
+        title="Genuine & AfterMarket Parts"
         subtitle='"Supplying Globally"'
       />
 

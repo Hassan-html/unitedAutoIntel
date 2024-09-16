@@ -268,6 +268,32 @@ const Navbar: React.FC = () => {
         <Link href="/contact" className="nav-link">
           CONTACT
         </Link>
+
+        {/* Social Media Icons */}
+        <div
+          className={`flex items-center gap-4 ${
+            isMenuOpen ? "block" : "hidden"
+          } lg:hidden`}
+        >
+          <a
+            href="https://www.facebook.com/share/Q8p9zYjhhvogF8gZ/?mibextid=LQQJ4d"
+            className="text-gray-600 hover:text-primary"
+          >
+            <FaFacebookF />
+          </a>
+          <a
+            href="http://wa.me/971558981016"
+            className="text-gray-600 hover:text-primary"
+          >
+            <FaWhatsapp />
+          </a>
+          <a
+            href="https://www.instagram.com/invites/contact/?igsh=st3g7int3a17&utm_content=vl53w82"
+            className="text-gray-600 hover:text-primary"
+          >
+            <FaInstagram />
+          </a>
+        </div>
       </nav>
     </header>
   );
