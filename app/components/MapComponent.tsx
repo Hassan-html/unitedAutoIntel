@@ -21,7 +21,7 @@ const ContactSection = () => {
             className="w-full md:w-1/2 h-64 md:h-96 overflow-hidden rounded-lg shadow-md"
           >
             <img
-              src="/maps/pakistan.jpg"
+              src="/maps/pakistan.png"
               alt="pakistan address"
               className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
             />
