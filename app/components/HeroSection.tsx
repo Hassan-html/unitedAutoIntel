@@ -65,7 +65,7 @@ const HeroSection = () => {
           >
             <div className="relative flex h-full justify-evenly w-full">
               <img
-                className=" h-full"
+                className=" object-contain h-full"
                 src="/images/slider/sparePartsOrignal.jpeg"
                 alt="spareParts"
               />
@@ -97,7 +97,7 @@ const HeroSection = () => {
           >
             <div className="relative flex h-full justify-evenly w-full">
               <img
-                className=" h-full"
+                className=" object-contain h-full"
                 src="/images/slider/genuineOrignal.jpeg"
                 alt="spareParts"
               />
@@ -129,7 +129,7 @@ const HeroSection = () => {
           >
             <div className="relative flex h-full justify-evenly w-full">
               <img
-                className=" h-full"
+                className=" object-contain h-full"
                 src="/images/slider/export.svg"
                 alt="spareParts"
               />
